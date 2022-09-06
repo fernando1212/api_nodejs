@@ -6,11 +6,8 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
 //cargamos el archivo de rutas
-app.use(require('./routes/expediente'));
-app.use(require('./routes/estado_expediente'));
-app.use(require('./routes/causante'));
-app.use(require('./routes/instituciones'));
-app.use(require('./routes/estadistica'));
+app.use(require('./routes/solicitudes'));
+
 
 app.listen(process.env.PORT||3300,() => {
     console.log("Servidor corriendo en el puerto 3300");
